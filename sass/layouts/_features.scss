@@ -1,0 +1,33 @@
+.about {
+  padding-bottom: 0;
+}
+
+.about__list {
+  display: flex;
+  gap: 30px;
+}
+
+.about__icons {
+  height: 120px;
+  background-color: var(--background-color);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__title {
+  font-size: 14px;
+  line-height: calc(14 / 16);
+  color: var(--title-tekst-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about__text {
+  margin-bottom: 10px;
+  max-width: 270px;
+  line-height: calc(24 / 14);
+  color: var(--primary-tekst-color);
+  letter-spacing: 0.03em;
+}

@@ -1,6 +1,9 @@
 header {
   padding: 24px 0;
   border-bottom: 1px solid #ececec;
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    padding: 0;
+  }
 }
 
 .header__container {
@@ -16,13 +19,24 @@ header {
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
+  margin-right: auto;
   color: #000000;
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
 
 .accent {
   color: var(--accent-color);
 }
 
+.main-nav {
+  display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 28px 0;
+  }
+}
 .menu__item {
   margin-right: 50px;
   &:last-child {
@@ -37,6 +51,11 @@ header {
   & a:hover,
   & a:focus {
     color: var(--accent-color);
+  }
+  align-items: center;
+  padding-left: 0;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
   }
 }
 
@@ -80,6 +99,15 @@ header {
   display: flex;
   margin-left: auto;
   gap: 50px;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
 
 .connect__link {

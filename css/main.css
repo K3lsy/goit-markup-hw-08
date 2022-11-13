@@ -790,7 +790,7 @@ header {
   .hero__title {
     font-size: 26px;
     line-height: 1.62;
-    width: 360px;
+    /* width: 360px; */
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1339,6 +1339,21 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color-white);
+}
+
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.25;
+}
+
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.25;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.25;
 }
 
 .btn-icon {

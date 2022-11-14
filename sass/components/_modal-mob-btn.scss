@@ -53,6 +53,9 @@
 .mob-item-nav:not(:last-child) {
   margin-bottom: 32px;
 }
+
+
+
 .mob-link {
   text-decoration: none;
   color: var(--title-tekst-color);
@@ -61,6 +64,10 @@
   }
 }
 
+.button-current {
+  background-color: var(--main-color-white);
+  color: var(--accent-color);
+}
 
 .mob-phone {
   text-decoration: none;

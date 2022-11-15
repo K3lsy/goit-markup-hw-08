@@ -186,24 +186,31 @@ body {
   fill: var(--accent-color);
 }
 
-.mob-menu {
-  position: absolute;
+.mob-modal {
+  position: fixed;
   top: 0;
   background-color: white;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  padding-left: 40px;
-  padding-bottom: 48px;
+  padding: 40px 10px;
 }
-@media screen and (min-width: 768px) {
-  .mob-menu {
-    display: none;
+.mob-modal > .container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media screen and (min-width: 480px) {
+  .mob-modal > .container {
+    height: 100%;
   }
 }
 
 .mob-nav {
-  margin-bottom: 300px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .mob-nav {
@@ -576,7 +583,7 @@ header {
 }
 @media screen and (min-width: 320px) and (max-width: 1199px) {
   header {
-    padding: 13px 0;
+    padding: 4px 0;
   }
 }
 
@@ -612,7 +619,7 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-nav {
-    padding: 28px 0;
+    padding: 21px 0;
   }
 }
 
@@ -829,12 +836,10 @@ header {
   flex-wrap: wrap;
 }
 
-.about__list-item {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .about__list-item {
     flex-basis: calc((100% - 60px) / 2);
+    width: 134px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -908,6 +913,23 @@ header {
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--main-color-white);
   bottom: 0px;
+}
+
+.team-item {
+  width: 450px;
+  background-color: var(--main-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .team-social {
@@ -985,22 +1007,6 @@ header {
   margin-bottom: 10px;
 }
 
-.team-item {
-  background-color: var(--main-color-white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-@media screen and (min-width: 768px) {
-  .team-item {
-    flex-basis: calc((100% - 60px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-item {
-    flex-basis: calc((100% - 90px) / 4);
-  }
-}
-
 .team-text {
   font-size: 16px;
   line-height: 1.1875;
@@ -1018,7 +1024,7 @@ header {
 }
 
 .clients {
-  padding-top: 94px;
+  padding-top: 60px;
 }
 
 .clients-list {
@@ -1374,7 +1380,7 @@ input::placeholder {
 
 .email-input {
   padding: 15px 16px;
-  width: 358px;
+  width: 350px;
   background-color: inherit;
   outline: transparent;
   border-radius: 4px;
